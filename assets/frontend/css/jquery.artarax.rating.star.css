@@ -1,0 +1,21 @@
+﻿.rating-star{
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+.rating-star span{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    /* float: left; */
+    background-image: url(../images/star-rate.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 22px 2px 18px;
+    cursor: pointer;
+    background-position: top;
+  }
+
+  .rating-star span.clicked,.rating-star span.hover{
+    background-position:bottom;
+  }

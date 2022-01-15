@@ -1,0 +1,150 @@
+ <header class="site-header">
+<!--
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                           <a class="d-block" href="index.html" rel="home">
+                               <img class="d-block" src="images/Logo/LOGO-day-star-psd.png" alt="logo"></a>
+                        </div>
+
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                                <li class="current-menu-item"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="services.html">Trading</a>
+                                    <ul class="dropdown-menus list-unstyled">
+                                            <li><a href="partners.html">Parteners</a></li>
+                                            <li><a href="suppliers.html">Suppliers</a></li>
+                                        </ul>
+                                </li>
+                                <li><a href="Home-care.html">Home Care</a></li>
+                                <li><a href="medical-tourism.html">Medical Tourism</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+     <div id="menu-area">
+        <div class="menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="h-logo"><a href="index.html"><img src="images/Logo/LOGO-day-star-psd.png" alt="Logo"></a></div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="menu-search">
+                            <nav class="main-menu">
+                                <ul class="list-unstyled">
+                                    <li class=" nav-item active-item"><a href="index.html">Home</a></li>
+                                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                                    <li class="nav-item"><a href="#">Trading</a>
+                                        <ul class="dropdown-menus list-unstyled">
+                                            <li><a href="partners.html">Parteners</a></li>
+                                            <li><a href="Suppliers.html">Suppliers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="Home-care.html">Home Care</a></li>
+                                    <li class="nav-item"><a href="medical-tourism.html">Medical Tourism</a></li>
+                                    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                                    <li class="nav-item"><a href="#">English</a>
+                                        <ul class="dropdown-menus list-unstyled">
+                                            <li><img src="images/icon/Egypt.png"/><a href="#">Arabic</a></li>
+                                            <li><img src="images/icon/spain.png"/><a href="#">Spanish</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-nav-wrap" class="clearfix">
+            <div class="container">
+                <div class="mobile-logo">
+                    <div class="h-logo"><a href="index.html"><img src="images/Logo/LOGO-day-star-psd.png" alt="Logo"></a></div>
+                </div>
+                <div class="toggle-inner"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-inner">
+            <div class="mobile-in-logo">
+                <div class="mob-inner-logo"><a href="index.html"> <img src="images/Logo/LOGO-day-star-psd.png" alt="Logo"></a></div>
+                <div class="close-menu"><i class="fas fa-times"></i></div>
+            </div>
+            <nav id="accordian">
+                <ul class="slide-menu list-unstyled">
+                    <li class="active-item"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="#" class="dropdown-here">Trading</a>
+                        <ul class="submenuItems list-unstyled">
+                            <li><a href="partners.html">Parteners</a></li>
+                            <li><a href="suppliers.html">Suppliers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Home-care.html">Home Care</a></li>
+                    <li><a href="medical-tourism.html">Medical Tourism</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+
+<script>
+    $('.toggle-inner').on('click', function(e) {
+        e.preventDefault();
+        $('body').toggleClass('going');
+        $('.close-menu').on('click', function() {
+            $('body').removeClass('going');
+        });
+    });
+
+    var Concertina = function(el, multiple) {
+        this.el = el || {};
+
+        this.multiple = multiple || false;
+
+        var dropdown_here = this.el.find('.dropdown-here');
+        dropdown_here.on('click', {
+                el: this.el,
+                multiple: this.multiple
+            },
+            this.dropdown);
+    };
+
+    Concertina.prototype.dropdown = function(e) {
+        e.preventDefault();
+        var $el = e.data.el,
+            $this = $(this),
+
+            $next = $this.next();
+
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
+
+        if (!e.data.multiple) {
+            $el.find('.submenuItems').not($next).slideUp().parent().removeClass('open');
+        }
+    }
+    var accordion = new Concertina($('.slide-menu'), false);
+
+</script>
+    <script>
+        $(".nav-item").on("click", function(e){
+            $("li.nav-item").removeClass("active-item");
+            $(this).addClass("active-item");
+        });
+   </script>

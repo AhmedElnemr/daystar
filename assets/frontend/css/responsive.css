@@ -1,0 +1,753 @@
+@media (min-width: 320px) and (max-width:575px){
+    #mobile-nav-wrap {
+        background-color: transparent;
+    }
+
+    .nav-bar,
+    #menu-area {
+        padding: 0;
+    }
+
+    #mobile-nav-wrap .mobile-logo img {
+        max-height: 85px;
+        width: 164px;
+        height: 46px;
+        
+    }
+    .h-logo img {
+        position: relative;
+        top: 25px;
+    }
+    .hero-content-wrap {
+        min-height: 300px;
+        height: 300px;
+    }
+    .hero-content-overlay{
+        display: none;
+    }
+    .hero-slider .pagination-wrap {
+        bottom: 46px;
+        left: 59px;
+    }
+    .homepage-boxes {
+        padding: 0px 0;
+    }
+    .appointment-box {
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 63px;
+        margin-bottom: 20px;
+    }
+    .appointment-box h2, .contact-info h2{
+        left: 72px;
+    }
+    .appointment-box p {
+        margin: 14px 7px 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .entry-footer {
+        margin-top: 0.5rem!important;
+    }
+    .entry-footer a{
+        text-align: center;
+    }
+    .our-departments {
+        padding: 35px 0;
+    }
+    .our-departments-wrap {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .our-departments-wrap h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+    .our-departments-cont {
+        margin-bottom: 20px;
+    }
+    .testimonial-section {
+        padding: 40px 0;
+    }
+    .testimonial-section::before{
+        width: 100%;
+    }
+    .testimonial-section h2 {
+        margin-bottom: 25px !important;
+        font-size: 26px;
+        text-align: center;
+    }
+    .testimonial-bg-shape::before{
+        display: none;
+    }
+    .testimonial-slider-wrap {
+        padding: 34px 12px 16px;
+    }
+    .testimonial-slider .entry-content p {
+        position: relative;
+        margin-top: 30px;
+        font-size: 13px;
+    }
+    .subscribe-banner {
+        padding: 20px 0;
+    }
+    .site-footer{
+        padding: 15px 0 2px;
+    }
+    .footer-widgets h2{
+        margin-bottom: 5px;
+    }
+    .site-footer .mt-5 {
+        margin-top: 1rem!important;
+    }
+    .mobile-in-logo{
+        background: #fff;
+        height: 91px;
+    }
+    .mob-inner-logo img {
+        width: 171px;
+        height: 68px;
+        border: none; 
+        box-shadow: none; 
+        border-radius: 0; 
+        margin-top: 17px;
+    }
+    .mobile-menu-inner {
+        background: #0abdb7;
+    }
+    .slide-menu > li > a{
+        font-weight: 600;
+    }
+    
+   .single-page .site-header {
+        padding: 41px 0 32px;
+    }
+    .single-page .site-header .header-img {
+        display: none;
+    }
+    .single-page .site-header h1{
+        text-align: left;
+        font-size: 29px;
+    }
+    .med-history {
+        padding: 50px 0;
+    }
+    .med-history h2, .medical-team h2, .quality-services h2{
+        text-align: center;
+        font-size: 29px;
+    }
+    .med-history p{
+        text-align: center;
+        font-size: 13px;
+    }
+    .contact-page-short-boxes {
+        padding: 50px 0;
+    }
+    .opening-hours, .emergency-box .contact-info{
+        padding: 10px;
+    }
+    .services {
+        padding: 40px 0;
+    }
+    .services .title h5 {
+        letter-spacing: 2px;
+        font-size: 13px;
+    }
+    .services .title p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    .services .title{
+        margin-bottom: 30px;
+    }
+    #make-order{
+        width: 100%;
+        margin: 20px auto;
+    }
+    #login{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #login h1, #register h1 {
+        font-size: 16px;
+    }
+    #login p, #register p {
+        font-size: 18px;
+        width: 100%;
+    }
+    #register{
+        width: 100%;
+        margin: 0 auto;
+    }
+    ul.resp-tabs-list{
+        display: contents !important;
+    }
+    .medical{
+        padding: 40px 0 1px;
+    }
+    .medical .title p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .parteners{
+        padding: 35px 0;
+    }
+    .parteners .title h5 {
+        letter-spacing: 1px;
+    }
+    .parteners .title p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .parteners .title{
+        margin-bottom: 30px;
+    }
+    .suppliers{
+        padding: 35px 0;
+    }
+    .suppliers .title h5 {
+        letter-spacing: 1px;
+    }
+    .suppliers .title p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .suppliers .title{
+        margin-bottom: 30px;
+    }
+    #content{
+        padding: 30px 0;
+    }
+    .dashboard-wrapper {
+        padding: 15px 6px;
+    }
+    .dashboard-wrapper .detail {
+        padding: 20px 0px;
+    }
+    .dashboard-wrapper .detail h4 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .dashboard-wrapper .save button{
+        width: 100%;
+    }
+
+    .noty {
+        padding: 0px 5px;
+        margin: 30px 14px 0;
+        width:320px;
+    }
+    .noty .order {
+        font-size: 20px;
+        padding: 0px 9px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .noty p {
+        font-size: 13px;
+    }
+    .notify .date{
+        width: 80%;
+    }
+    .notify .date h6{
+        font-size: 12px;
+    }
+    .notify .noty ul{
+        display: block;
+    }
+    .notify .noty ul li {
+        width: 100%;
+        margin-right: 1%;
+        font-size: 13px;
+    }
+    .notify .noty ul li:last-child{
+        text-align: left;
+    }
+
+    .checkout-page .theme-form{
+        padding: 10px !important;
+        background-color: #f1f4f7;
+        border: 5px solid #fff !important;
+    
+    }
+    .section-big-mt-space {
+        margin-top: 14px;
+    }
+    .order-box .title-box span {
+        position: relative;
+        width: 23% !important;
+        float: right;
+        line-height: 1.8em !important;    
+    }
+    h1{
+        margin-bottom: 30px !important;
+    }    
+    .foot-links ul li{
+        display: block !important;
+    }
+
+
+}
+@media (min-width: 425px) and (max-width:575px){
+    .cart-table .action{
+        display:block !important;
+    }
+    .cart-section .cart-table thead th,
+     .wishlist-section .cart-table thead th {
+        font-size: 11px !important;
+        }
+     .mi-slider{
+        height: 500px !important;
+    }
+    .mi-slider nav {
+        display: block;
+       top: -220px !important;
+   }
+   .mi-slider nav a.mi-selected:before{
+        border-width: 25px;
+        margin-left: -25px;
+   }
+   .mi-slider nav a.mi-selected:after, .mi-slider nav a.mi-selected:before
+   {
+    top: 91px;
+   }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .noty {
+        padding: 0px 5px;
+        margin: 30px 14px 0;
+    }
+    .noty .order {
+        font-size: 20px;
+        padding: 0px 9px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .noty p {
+        font-size: 13px;
+    }
+    .notify .date{
+        width: 80%;
+    }
+    .notify .date h6{
+        font-size: 12px;
+    }
+    .notify .noty ul{
+        display: block;
+    }
+    .notify .noty ul li {
+        width: 100%;
+        margin-right: 1%;
+        font-size: 13px;
+    }
+    .notify .noty ul li:last-child{
+        text-align: left;
+    }
+    #content{
+        padding: 30px 0;
+    }
+    .dashboard-wrapper {
+        padding: 15px 6px;
+    }
+    .dashboard-wrapper .detail {
+        padding: 20px 0px;
+    }
+    .dashboard-wrapper .detail h4 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .dashboard-wrapper .save button{
+        width: 100%;
+    }
+    .suppliers{
+        padding: 35px 0;
+    }
+    .suppliers .title h5 {
+        letter-spacing: 1px;
+    }
+    .suppliers .title p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .suppliers .title{
+        margin-bottom: 30px;
+    }
+    .parteners{
+        padding: 35px 0;
+    }
+    .parteners .title h5 {
+        letter-spacing: 1px;
+    }
+    .parteners .title p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .parteners .title{
+        margin-bottom: 30px;
+    }
+     .medical{
+        padding: 40px 0 1px;
+    }
+    .medical .title p{
+        width: 100%;
+        font-size: 14px;
+    }
+    #login{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #login h1, #register h1 {
+        font-size: 16px;
+    }
+    #login p, #register p {
+        font-size: 18px;
+        width: 100%;
+    }
+    #register{
+        width: 100%;
+        margin: 0 auto;
+    }
+    ul.resp-tabs-list{
+        display: contents !important;
+    }
+     #make-order{
+        width: 100%;
+        margin: 20px auto;
+    }
+     #mobile-nav-wrap {
+        background-color: transparent;
+    }
+
+    .nav-bar,
+    #menu-area {
+        padding: 0;
+    }
+
+    #mobile-nav-wrap .mobile-logo img {
+        max-height: 85px;
+        width: 164px;
+        height: 46px;
+        
+    }
+    .mobile-in-logo{
+        background: #fff;
+    }
+     .mob-inner-logo img {
+        width: 171px;
+        height: 68px;
+        border: none; 
+        box-shadow: none; 
+        border-radius: 0; 
+        margin-top: 17px;
+    }
+    .mobile-menu-inner {
+        background: #0abdb7;
+    }
+    .h-logo img {
+        width: 166px;
+        height: 39px;
+    }
+    .single-page .site-header h1{
+        font-size: 40px;
+    }
+    .services .title p{
+        width: 100%;
+    }
+    .main-menu ul li a {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 0px 3px;
+        line-height: 47px;
+    }
+    .hero-content-wrap {
+        min-height: 300px;
+        height: 300px;
+    }
+    .hero-content-overlay{
+        display: none;
+    }
+    .hero-slider .pagination-wrap {
+        bottom: 46px;
+        left: 59px;
+    }
+    .homepage-boxes {
+        padding: 0px 0;
+    }
+    .appointment-box {
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 63px;
+        margin-bottom: 20px;
+    }
+    .appointment-box h2, .contact-info h2{
+        left: 72px;
+    }
+    .appointment-box p {
+        margin: 14px 7px 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .entry-footer {
+        margin-top: 0.5rem!important;
+    }
+    .entry-footer a{
+        text-align: center;
+    }
+    .our-departments {
+        padding: 35px 0;
+    }
+    .our-departments-wrap {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .our-departments-wrap h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+    .our-departments-cont {
+        margin-bottom: 20px;
+    }
+    .testimonial-section {
+        padding: 40px 0;
+    }
+    .testimonial-section::before{
+        width: 100%;
+    }
+    .single-page .site-header{
+        padding: 57px 0 43px;   
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .product-demo{
+        margin-bottom:30px;
+    }
+    .noty {
+        padding: 0px 5px;
+        margin: 30px 14px 0;
+    }
+    .noty .order {
+        font-size: 20px;
+        padding: 0px 9px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .noty p {
+        font-size: 13px;
+    }
+    .notify .date{
+        width: 80%;
+    }
+    .notify .date h6{
+        font-size: 12px;
+    }
+    .notify .noty ul{
+        display: block;
+    }
+    .notify .noty ul li {
+        width: 100%;
+        margin-right: 1%;
+        font-size: 13px;
+    }
+    .notify .noty ul li:last-child{
+        text-align: left;
+    }
+    #content{
+        padding: 30px 0;
+    }
+    .dashboard-wrapper {
+        padding: 15px 6px;
+    }
+    .dashboard-wrapper .detail {
+        padding: 20px 0px;
+    }
+    .dashboard-wrapper .save button{
+        width: 100%;
+    }
+    .dashboard-wrapper .detail h4 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .suppliers,.parteners{
+        padding: 35px 0;
+    }
+    .suppliers .title h5,.parteners .title h5 {
+        letter-spacing: 1px;
+    }
+    .suppliers .title p,.parteners .title h5 {
+        font-size: 14px;
+        width: 100%;
+    }
+    .suppliers .title,.parteners .title h5{
+        margin-bottom: 30px;
+    }
+     .medical{
+        padding: 40px 0 1px;
+    }
+    .medical .title p{
+        width: 100%;
+        font-size: 14px;
+    }
+    #login{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #login h1, #register h1 {
+        font-size: 16px;
+    }
+    #login p, #register p {
+        font-size: 18px;
+        width: 100%;
+    }
+    #register{
+        width: 100%;
+        margin: 0 auto;
+    }
+    ul.resp-tabs-list{
+        display: contents !important;
+    }
+     #make-order{
+        width: 100%;
+        margin: 20px auto;
+    }
+    .h-logo img {
+        width: 166px;
+        height: 39px;
+    }
+    .mobile-in-logo {
+    background: #fff;
+    height: 91px;
+}
+    .main-menu ul li a {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 0px 3px;
+        line-height: 47px;
+    }
+    .hero-content-wrap {
+        min-height: 400px;
+        height: 300px;
+    }
+    .hero-content-overlay{
+        display: none;
+    }
+    .hero-slider .pagination-wrap {
+        bottom: 46px;
+        left: 59px;
+    }
+    .homepage-boxes {
+        padding: 0px 0;
+    }
+    .appointment-box {
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 63px;
+        margin-bottom: 20px;
+    }
+    .appointment-box h2, .contact-info h2{
+        left: 72px;
+    }
+    .appointment-box p {
+        margin: 14px 7px 0px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .entry-footer {
+        margin-top: 0.5rem!important;
+    }
+    .entry-footer a{
+        text-align: center;
+    }
+    .our-departments {
+        padding: 35px 0;
+    }
+    .our-departments-wrap {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .our-departments-wrap h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+    .our-departments-cont {
+        margin-bottom: 20px;
+    }
+    .testimonial-section {
+        padding: 40px 0;
+    }
+    .testimonial-section::before{
+        width: 100%;
+    }
+    .single-page .site-header{
+        padding: 57px 0 43px;   
+    }
+    .single-page .site-header .header-img{
+        max-width: 71%;
+        height: 279px;
+    }
+    .single-page .site-header h1{
+        font-size: 44px;
+    }
+    .mob-inner-logo img {
+        width: 171px;
+        height: 68px;
+        border: none; 
+        box-shadow: none; 
+        border-radius: 0; 
+        margin-top: 17px;
+    }
+    .mobile-menu-inner {
+        background: #0abdb7;
+    }
+    .mi-slider{
+        margin-top: 30px;
+    }
+    .mi-slider nav{
+        border-bottom: 2px solid #0fadbd;
+    }
+    .mi-slider nav a.mi-selected:before{
+        border-width: 23px;
+        left: 50%;
+        margin-left: -23px;
+    }
+    .mi-slider nav a.mi-selected:after,
+     .mi-slider nav a.mi-selected:before{
+        top: 56px;
+     }
+    .mi-slider nav a {
+        font-size: 18px;
+        padding: 7px 10px 17px 14px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    
+    .h-logo img {
+        width: 166px;
+        height: 39px;
+    }
+    .main-menu ul li a {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0px 7px;
+        line-height: 47px;
+    }
+    .hero-content-wrap {
+        min-height: 400px;
+        height: 450px;
+    }
+    .hero-content-overlay h1 {
+        font-size: 42px;
+    }
+    .hero-slider .pagination-wrap {
+        bottom: 0px;
+        left: 2px;
+        top: 49%;
+    }
+    .slider-swip{
+        position: absolute;
+        left: 72px;
+    }
+}
