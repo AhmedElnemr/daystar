@@ -37,6 +37,6 @@ uploads/thumbs/*
 *.zip
 *.rar
 
-.idea
-assets/backend/*
+.idea/*
+
 assets/frontend/*
