@@ -69,8 +69,10 @@ class Order_model extends MY_Model {
         $this->db->where("available",1);
         $this->db->where("be_provider",1);
         $this->db->where("area_id",$Idata['area_id']);
-        $this->db->where("specialty_id",$Idata['specialty_id']);
-        $this->db->where("deleted",0);
+		if (isset($Idata['specialty_id'])) {
+			$this->db->where("specialty_id", $Idata['specialty_id']);
+		}
+		$this->db->where("deleted",0);
         if ($Idata['gender'] == 1 || $Idata['gender'] == 2 ) {
             $this->db->where("gender", $Idata['gender']);
         }

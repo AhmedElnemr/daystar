@@ -168,6 +168,7 @@ class Registration extends REST_Controller{
             $Idata["email"] = $this->post("email");
             $Idata["gender"] = $this->post("gender");
             $Idata["soft_type"] = $this->post("soft_type");
+			$Idata["advertiser_code"] = $this->post("advertiser_code");
             $Idata["user_type"] =1;
             $Idata["is_login"] =1;
             $Idata["logo"] = uploadFile("logo");

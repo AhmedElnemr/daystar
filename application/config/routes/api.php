@@ -95,6 +95,12 @@ $route['api/send-rest-code']["POST"] = 'web_service/RestPass/sendRestCode';
 $route['api/confirm-code']["POST"] = 'web_service/RestPass/confirmCode';
 $route['api/rest-password']["POST"] = 'web_service/RestPass/restPassword';
 
+
+$route['api/coupon']["POST"] = 'web_service/Order/coupon';
+
+
+
+
 /**
  *  ============================================================
  *

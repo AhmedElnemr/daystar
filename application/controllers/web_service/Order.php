@@ -166,11 +166,27 @@ class Order extends REST_Controller
 		$Idata["price"] = $this->post("price");
 		$Idata["num_times"] = $this->post("num_times");
 		$Idata["num_patients"] = $this->post("num_patients");
+		$Idata["coupon_discount"] = $this->post("coupon_discount");
+		$Idata["coupon_id"] = $this->post("coupon_id");
 		$this->load->model('Order_model');
 		$order_id = $this->Order_model->insert($Idata);
 		$Idata["order_id"] = $order_id;
 		//------------------------------------
 		$providers = $this->Order_model->sendOrderToProviders($Idata);
+		//------------------------------------
+		if($this->post("coupon_id")){
+			$this->load->model('Coupon_model');
+			$couponObj = $this->Coupon_model->get($this->post("coupon_id"));
+			if (isset($couponObj->id)) {
+				$this->load->model('Coupon_users_model');
+				$this->Coupon_users_model->insert([
+					"user_id" => $user->user_id,
+					"type" => $couponObj->type,
+					"value" => $couponObj->value,
+					"coupon_id" => $couponObj->id,
+				]);
+			}
+		}
 		//------------------------------------
 		if ($providers["status"] == true) {
 			$json = ["data" => " sucess order id = " . $order_id,
@@ -692,6 +708,7 @@ class Order extends REST_Controller
 		$this->Notifications_model->insert($note);
 		//----------------------------
 		$this->addAccounts($order);
+		$this->setUaersCom($order);
 		//----------------------------
 		//  FIRE BASE NOTE TO PROVIDER HAVE RATER
 		$not = haveRating($from, [$to], $order_id);
@@ -720,7 +737,10 @@ class Order extends REST_Controller
 		$acc['created_by'] = $order->provider_id;
 		$acc['created_at'] = time();
 		$this->Accounts_model->insert($acc);
-		//---------------------------------
+
+	}
+
+	private function setUaersCom($order){
 		$this->load->model('Registrations_model');
 		$provider = $this->Registrations_model->get($order->provider_id);
 		$advertiser = $this->Registrations_model->get_by(["user_code" => $provider->advertiser_code]);
@@ -745,9 +765,76 @@ class Order extends REST_Controller
 			$this->Accounts_model->insert($accCom);
 			//-----------------------------
 		}
-
+		//========================================================================
+		$user = $this->Registrations_model->get($order->user_id);
+		$advertiser = $this->Registrations_model->get_by(["user_code" => $user->advertiser_code]);
+		if (!empty($advertiser)) {
+			$accCom["user_id"] = $advertiser->user_id;
+			$accCom["company"] = 0;
+			$accCom["provider"] = $order->price * COMMISSIONS_ORDERS;
+			$accCom["content"] = "  عمولة عميل ١٪؜  من الطلب رقم :" . $order->order_id;
+			$accCom['type'] = 'order_to_user';
+			$accCom['date'] =strtotime(date("Y-m-d")) ;
+			$accCom['order_id'] = $order->order_id;
+			$accCom['created_by'] = $order->provider_id;
+			$accCom['created_at'] = time();
+			$this->Accounts_model->insert($accCom);
+			//-----------------------------
+		}
 	}
 
+	private function setAnnouncer($order){
+		$this->load->model('Announcer_model');
+		$this->load->model('Announcer_accounts_model');
+		$user = $this->Registrations_model->get($order->user_id);
+		$advertiser = $this->Announcer_model->get_by(["code" => $user->advertiser_code]);
+		if (!empty($advertiser)) {
+			$accCom["user_id"] = $order->user_id;
+			$accCom["announcer_id"] = $advertiser->id;
+			$accCom["value"] = ( $order->price * $advertiser->commission ) / 100 ;
+			$accCom["content"] = "  عمولة تسويف ".$advertiser->commission."٪؜  من الطلب رقم :" . $order->order_id;
+			$accCom['type'] = 'commission';
+			$accCom['date'] =strtotime(date("Y-m-d")) ;
+			$accCom['order_id'] = $order->order_id;
+			$accCom['created_by'] = $order->user_id;
+			$accCom['created_at'] = time();
+			$this->Announcer_accounts_model->insert($accCom);
+			//-----------------------------
+		}
+	}
+
+
+
+	public function coupon_post(){
+		/*$validAuth = $this->verifyRequest();
+		$user = $validAuth->msg;
+		$code = $validAuth->code;
+		if ($validAuth->status == false) {
+			return $this->set_response(['data' => $user], $code);
+		}
+		*/
+		//--------------------
+		$this->form_validation->set_rules('user_id', '', "required|numeric|valid_user_id");
+		$this->form_validation->set_rules('code', '', "required");
+		if ($this->form_validation->run() == FALSE) {
+			return $this->validResponse();
+		}
+		//--------------------
+		$this->load->model('Coupon_model');
+		$this->load->model('Coupon_users_model');
+        $findCode = $this->Coupon_model->get_by(["code"=>$this->post('code')]);
+        if(!empty($findCode) &&  $findCode!= null){
+          if($findCode->from_date <= time() && time() <= $findCode->to_date ){
+			  $user = $this->Coupon_users_model->get_by(["coupon_id"=>$findCode->id,"user_id"=>$this->post("user_id")]);
+			  if (!empty($user) && $user != null) {
+				  return $this->okResponse(["msg" => "used before", "data" => null, "code" => 407]);
+			  }
+			  return $this->okResponse(["msg" => "success end", "data" => $findCode, "code" => 200]);
+		  }
+			return $this->okResponse(["msg" => "code expired","data"=>null,"code"=>406]);
+		}
+		return $this->okResponse(["msg" => "code not found","data"=>null,"code"=>404]);
+	}
 
 } // END CLASS
 ?>
