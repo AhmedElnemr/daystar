@@ -250,6 +250,13 @@ $route['(ar|en)/admin-coupons/(:any)'] = 'Coupons/$1';
 $route['admin-coupons/(:any)'] = 'Coupons/$1';
 $route['(ar|en)/admin-coupons/(:any)/(:any)']= 'Coupons/$1/$2';
 $route['admin-coupons/(:any)/(:any)']= 'Coupons/$1/$2';
+//---------------  slider    ----------------------
+$route['(ar|en)/admin-announcer'] = 'Announcer';
+$route['admin-announcer'] = 'Announcer';
+$route['(ar|en)/admin-announcer/(:any)'] = 'Announcer/$1';
+$route['admin-announcer/(:any)'] = 'Announcer/$1';
+$route['(ar|en)/admin-announcer/(:any)/(:any)']= 'Announcer/$1/$2';
+$route['admin-announcer/(:any)/(:any)']= 'Announcer/$1/$2';
 
 
 /**

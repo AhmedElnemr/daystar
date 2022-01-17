@@ -120,6 +120,18 @@
 			$("input",$(this)).removeAttr('data-validation');
 		}
 	})
+
+	$("#type-announcer").on("change",function (){
+		let typeAnnouncer  = $(this).val();
+		if(typeAnnouncer == "doctor"){
+			$("#specialization").show();
+			$("input",$(this)).attr('data-validation','required');
+		}
+		if(typeAnnouncer =="hospital"){ //
+			$("#specialization").hide();
+			$("input",$(this)).removeAttr('data-validation');
+		}
+	})
 </script>
 
 <!--begin::Page Vendors -->

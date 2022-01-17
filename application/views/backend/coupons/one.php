@@ -29,7 +29,7 @@ endif?>
         </div>
         <div class="col-lg-4">
             <label>القيمة   :</label>
-            <input type="text" name="Pdata[value]" value="<?= $out["value"] ?>"
+            <input type="number" name="Pdata[value]" value="<?= $out["value"] ?>"
                    class="form-control m-input"
                    data-validation="required">
         </div>
@@ -38,7 +38,7 @@ endif?>
     <div class="form-group m-form__group row">
 		<div class="col-lg-4" id="limit_value" style="<?=($out["type"] == "val")? "":"display: none"?>">
 			<label>الحد الادنى للطلب :</label>
-			<input type="text" name="Pdata[limit_value]" value="<?= $out["limit_value"] ?>"
+			<input type="number" name="Pdata[limit_value]" value="<?= $out["limit_value"] ?>"
 				   class="form-control m-input">
 		</div>
 
