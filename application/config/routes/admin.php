@@ -243,7 +243,13 @@ $route['admin-accounts/(:any)'] = 'Accounts/$1';
 $route['(ar|en)/admin-accounts/(:any)/(:any)']= 'Accounts/$1/$2';
 $route['admin-accounts/(:any)/(:any)']= 'Accounts/$1/$2';
 
-
+//---------------  slider    ----------------------
+$route['(ar|en)/admin-coupons'] = 'Coupons';
+$route['admin-coupons'] = 'Coupons';
+$route['(ar|en)/admin-coupons/(:any)'] = 'Coupons/$1';
+$route['admin-coupons/(:any)'] = 'Coupons/$1';
+$route['(ar|en)/admin-coupons/(:any)/(:any)']= 'Coupons/$1/$2';
+$route['admin-coupons/(:any)/(:any)']= 'Coupons/$1/$2';
 
 
 /**

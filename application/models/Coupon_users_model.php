@@ -11,6 +11,7 @@ class Coupon_users_model extends MY_Model {
 
 	public $belongs_to = [
 		'client' => ['model' => 'Registrations_model',"primary_key"=>'user_id'],
+		'coupon' => ['model' => 'Coupon_model',"primary_key"=>'coupon_id'],
 	];
 
 	public $translate_to = [];

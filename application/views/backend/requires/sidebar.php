@@ -179,6 +179,22 @@
 							<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
 							<span class="m-menu__link-text">إضافة بنر الموقع </span></a>
 					</li>
+                    <!---------------------------------------------------->
+					<li class="m-menu__item " aria-haspopup="true">
+						<a href="<?= base_url() . "admin-coupons" ?>" class="m-menu__link ">
+							<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+							<span class="m-menu__link-text"> عرض الكوبونات </span></a>
+					</li>
+					<li class="m-menu__item " aria-haspopup="true">
+						<a href="<?= base_url() . "admin-coupons/add" ?>" class="m-menu__link ">
+							<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+							<span class="m-menu__link-text">إضافة كوبون </span></a>
+					</li>
+					<li class="m-menu__item " aria-haspopup="true">
+						<a href="<?= base_url() . "admin-coupons/user_coupons" ?>" class="m-menu__link ">
+							<i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+							<span class="m-menu__link-text">الكوبونات المستخدمة</span></a>
+					</li>
 
 					<li class="m-menu__item " aria-haspopup="true">
 						<a href="<?= base_url() . "app-slider" ?>" class="m-menu__link ">

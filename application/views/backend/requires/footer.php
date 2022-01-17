@@ -108,6 +108,18 @@
             });
         }
     })
+
+	$("#type-coupon").on("change",function (){
+		let typeCoupon  = $(this).val();
+		if(typeCoupon == "val"){
+			$("#limit_value").show();
+			$("input",$(this)).attr('data-validation','required');
+		}
+		if(typeCoupon =="per"){
+			$("#limit_value").hide();
+			$("input",$(this)).removeAttr('data-validation');
+		}
+	})
 </script>
 
 <!--begin::Page Vendors -->
